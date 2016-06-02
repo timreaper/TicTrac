@@ -1,0 +1,49 @@
+<div class="menu-container">
+    <div class="container menu">
+        <div class="menu__logo">
+            <span class="tic">Tic</span>
+            <span class="trac">Trac</span>
+        </div>
+        <div class="menu__links">
+            <a href="" title="Item 1">Item 1</a>
+            <a href="" title="Item 2">Item 2</a>
+            <a href="" title="Item 3">Item 3</a>
+            <a href="" title="Item 4">Item 4</a>
+        </div>
+    </div>
+</div>
+<div class="container tweets-container">
+    {{#each data}}
+        <div class="tweet" id="tweet{{id}}">
+            <div class="tweet__user__avatar">
+                {{#ifCond this.default_profile_image false}}
+                    <a href="/user/{{user.screen_name}}" title="{{user.name}}">
+                        <img src="{{user.profile_background_image_url_https}}" alt="{{user.name}}"
+                             title="{{user.name}}">
+                    </a>
+                {{else}}
+                    <a href="/user/{{user.screen_name}}" title="{{user.name}}">
+                        <img src="app/assets/avatar.png" alt="{{user.name}}" title="{{user.name}}">
+                    </a>
+                {{/ifCond}}
+            </div>
+            <div class="flex-grow">
+                <div class="space-between">
+                    <div class="tweet__user__name">
+                        <span class="tweet__user__name--display">{{user.name}}</span>
+                        <a class="tweet__user__name--link" href="/user/{{user.screen_name}}" title="{{user.name}}">
+                            @{{user.screen_name}}
+                        </a>
+                    </div>
+                    <div class="tweet__date">
+                        {{dateFormatter created_at}}
+                    </div>
+                </div>
+
+                <div class="tweet__text">
+                    {{text}}
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

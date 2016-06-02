@@ -1,0 +1,26 @@
+.menu-container {
+  background-color: #1cade9;
+  height: 150px;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__links {
+    a {
+      color: white;
+    }
+  }
+}
+
+.tic {
+  opacity: 0.5;
+}
