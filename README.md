@@ -1,7 +1,7 @@
 # Hi TicTrac!
 
 This is the code created from having done your assessment. It took roughly
-an hour & 45 minutes to complete and I did it using:
+an hour & 35 minutes to complete and I did it using:
 
 - Gulp (for running tasks)
 - Handlebars (for templating)
